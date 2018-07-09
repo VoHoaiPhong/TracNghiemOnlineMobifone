@@ -1,0 +1,11 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "post": 2000
+    },
+    "oracledb": {
+        "user": "vohoaiphong",
+        "password": "orcl",
+        "connectString": "localhost/orcl"
+    }
+}

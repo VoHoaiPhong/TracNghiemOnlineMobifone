@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+<header>
+  <% include ../partials/header %>
+</header>
+
+<body class="fix-header">
+  <main>
+    <div id="page-wrapper">
+      <div class="container-fluid">
+        <div class="row bg-title">
+          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Kết Quả Kỳ Thi </h4> </div>
+          <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <ol class="breadcrumb">
+              <li><a href="index">Trang Chủ</a></li>
+              <li class="active">Kết Quả Kỳ Thi</li>
+            </ol>
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="white-box">
+
+              <div class="table-responsive">
+                <table class="table" id="myTable">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Tên kỳ thi</th>
+                      <th>Số lượng câu hỏi</th>
+                      <th>Thời gian</th>
+                      <th>Xem Kết Quả kỳ Thi</th>
+                      <th>Xóa</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Dữ liệu từ Json -->
+                  </tbody>
+                </table>
+                <div class="navlinks">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page Content -->
+      <!-- ============================================================== -->
+    </div>
+  </main>
+  <script>
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+    var today = year + "-" + month + "-" + day;
+    // document.getElementById("stardate").value = today;
+    document.getElementById("stardate").min = today
+    // document.getElementById("enddate").value = today;
+    document.getElementById("enddate").min = today;
+  </script>
+<!--
+  <script type="text/javascript">
+    jQuery(function($){
+          var pages = $("#myTable tr");
+          var pagesize = 5;
+          var pagecount = Math.ceil(pages.length/pagesize);
+          var starIndex =0;
+          for(var i=1; i <= pagecount;i++){
+            var selectedItems = pages.slice(starIndex, i*pagesize);
+            selectedItems.wrapAll('<div class="page"></div>');
+            starIndex = i * pagesize;
+            $('#myTable div.page:nth-child(1)').addClass('showpage');
+            var link = $("<a htef='#' />").text(i);
+            $('.navlinks').append(link);
+            link.on('click',function(e){
+              var pageno = $(this).text();
+              $("#myTable div.page").removeClass('shopage');
+              $('#myTable div.page:nth-child('+pageno+')').addClass('showpage');
+            });
+          }
+    })
+  </script>
+ -->
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+
+</html>

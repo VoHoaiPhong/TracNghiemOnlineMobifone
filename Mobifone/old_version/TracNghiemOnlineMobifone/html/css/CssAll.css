@@ -1,0 +1,54 @@
+@media (min-width: 992px) {
+    .modal-dialog {
+        max-width: 1024px;
+    }
+
+    .modal-lg {
+        width: 1024px;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-left-part {
+        width: 125px;
+        /*height: 48px*/
+    }
+    .show-xs {
+        display: inline-block !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1170px) {
+    .hide-sidebar .top-left-part {
+        width: 240px;
+        height: 60px;
+    }
+}
+.jq-icon-warning{
+	background-color: #EDF1F5;
+}
+
+
+.dapandung {
+    color: #FF0047
+}
+.top-left-part {
+    /* width: 240px; */
+    height: 60px;
+}
+
+.colordelete{
+  color: #EB0000
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    /*    background-color: white;*/
+    background-color: transparent;
+}
